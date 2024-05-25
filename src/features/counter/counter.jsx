@@ -11,6 +11,8 @@ function Counter(){
             <h1>Counter:{count}</h1>
             <button  className="btn btn-danger" onClick={()=>{dispatch(inc())}}>Increment</button> 
             <button className="btn btn-success" onClick={()=>{dispatch(dec())}}>Decrement</button>
+            <button className="btn btn-warning" onClick={()=>{dispatch(reset())}}>Reset</button>
+        
         </div>
     )
 }
