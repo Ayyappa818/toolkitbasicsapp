@@ -13,6 +13,9 @@ import Products from './features/products/Products';
 import Countries from './features/countries/Countries';
 import Counter from './features/counter/counter';
 import Todolist from './features/todolist/todolist';
+import Posts from './features/posts/Posts';
+import Addpost from './features/posts/Addposts';
+import Editpost from './features/posts/Editpost';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 const router = createBrowserRouter([
@@ -35,6 +38,18 @@ const router = createBrowserRouter([
       {
         path: "/products",
         element: <Products></Products>
+      },
+      {
+        path: "/posts",
+        element: <Posts></Posts>
+      },
+      {
+        path: "/addpost",
+        element: <Addpost></Addpost>
+      },
+      {
+        path: "/editpost",
+        element: <Editpost></Editpost>
       },
     ]
   },
