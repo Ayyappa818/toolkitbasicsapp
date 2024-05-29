@@ -22,14 +22,14 @@ function Editpost(){
         }
     })
     return (
-        <div>
+        <div className="border border-5 border-dark p-2 m-2 bg-warning">
             <h1>Editpost</h1>
             <form onSubmit={editpostForm.handleSubmit}>
                 <input type="text" placeholder="Title" {...editpostForm.getFieldProps('title')} />
                 <br />
                 <input type="text" placeholder="Author" {...editpostForm.getFieldProps('author')} />
                 <br /><br />
-                <button>Update Post</button>
+                <button className="btn btn-2 btn-primary">Update Post</button>
             </form>
         </div>
     )

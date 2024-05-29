@@ -15,20 +15,22 @@ function Products(){
         })
     }
     return (
-        <div className="border border-2 border-warning m-2 p-2">
+        <div className="border border-2 border-warning m-2 p-2" style={{backgroundColor:"orange"}}>
             <h1>Products</h1>
             <button onClick={()=>{getProducts()}}>Load Our Products</button>
             {isLoading && (<button class="btn btn-primary" type="button" disabled>
   <span class="spinner-grow spinner-grow-sm" aria-hidden="true"></span>
   <span role="status">Loading...</span>
 </button>)}
-            <ul>
+            <ul className="d-flex flex-wrap">
             {isLoading===false && (
                 data.map((p)=>{
-                    return <div>
-                        <li>{p.title}</li>
+                    return <div className="border border-2 border-secondary p-2 m-2" style={{backgroundColor:"white"}}>
+                        <li className=" p-5 d-flex flex-column justify-content-between">
+                        <p>{p.title}</p>
                         <img src={p.image} alt="" width="200px" />
-                        <li><h4>Price:{p.price}</h4></li>
+                        <i><h4>Price:{p.price}</h4></i>
+                        </li>
                     </div>
                 })
             )}

@@ -15,14 +15,14 @@ function Addpost(){
         }
     })
     return (
-        <div>
+        <div className="border border-5 border-dark p-2 m-2 bg-info">
             <h1>Addpost</h1>
             <form onSubmit={postForm.handleSubmit}>
                 <input type="text" placeholder="Title" {...postForm.getFieldProps('title')} />
                 <br />
                 <input type="text" placeholder="Author" {...postForm.getFieldProps('author')} />
                 <br /><br />
-                <button>Add Post</button>
+                <button className="btn btn-2 btn-primary">Add Post</button>
             </form>
         </div>
     )

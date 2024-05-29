@@ -19,7 +19,7 @@ function Posts(){
         lazyGetAllPostsfn()
     },[])
     return (
-        <div>
+        <div className="border border-2 border-info m-2 p-2" style={{backgroundColor:'deepskyblue',color:'black'}}>
             <h1>Posts</h1>
                 {
                     isLoading && (<h4>Loading...</h4>)
@@ -30,8 +30,8 @@ function Posts(){
                         data?.map((p)=>{
                             return <li>
                                 {p.title}-{p.author}
-                                <button onClick={()=>{deletePostHandler(p.id)}}>Delete</button>
-                                <button onClick={()=>{Editpost(p)}}>Edit</button>
+                                <button className="btn btn-2 btn-danger" onClick={()=>{deletePostHandler(p.id)}}>Delete</button>
+                                <button className="btn btn-2 btn-success" onClick={()=>{Editpost(p)}}>Edit</button>
                             </li>
                         })
                 )

@@ -14,18 +14,22 @@ function Countries(){
     },[isLoading])
     console.log(countries)
     return (
-        <div className="border border-2 border-dark m-2 p-2">
+        <div className="border border-2 border-dark m-2 p-2" style={{backgroundColor:'lightskyblue'}}>
             <h1>Countries</h1>
             {isLoading && (<button class="btn btn-primary" type="button" disabled>
   <span class="spinner-grow spinner-grow-sm" aria-hidden="true"></span>
   <span role="status">Loading...</span>
 </button>)}
-            <ul>
+            <ul className="d-flex flex-wrap">
             {isLoading===false && (
                 countries?.map((c)=>{
-                    return <div>    
-                        <li>{c.name.common}</li>
-                        <img src={c.flags[0]} alt="" width="200px" />
+                    return <div className="border border-2 border-secondary m-2 p-2" style={{backgroundColor:"whitesmoke"}}>    
+                        <li className="w-25 p-5 d-flex flex-column justify-content-between">
+                            <b>COUNTRY NAME:{c.name.common}</b>
+                            <img src={c.flags[0]} alt="" width="200px" />
+                            <b>CAPITAL:{c.capital}</b>
+                            <b><i>POPULATION:{c.population}</i></b>
+                        </li>
                     </div>
                 })
             )}
