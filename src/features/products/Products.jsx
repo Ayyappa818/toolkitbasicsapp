@@ -25,8 +25,8 @@ function Products(){
             <ul className="d-flex flex-wrap">
             {isLoading===false && (
                 data.map((p)=>{
-                    return <div className="border border-2 border-secondary p-2 m-2" style={{backgroundColor:"white"}}>
-                        <li className=" p-5 d-flex flex-column justify-content-between">
+                    return <div className="border border-2 border-secondary p-2 m-2 w-25" style={{backgroundColor:"white"}}>
+                        <li>
                         <p>{p.title}</p>
                         <img src={p.image} alt="" width="200px" />
                         <i><h4>Price:{p.price}</h4></i>

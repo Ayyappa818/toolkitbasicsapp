@@ -23,11 +23,11 @@ function Countries(){
             <ul className="d-flex flex-wrap">
             {isLoading===false && (
                 countries?.map((c)=>{
-                    return <div className="border border-2 border-secondary m-2 p-2" style={{backgroundColor:"whitesmoke"}}>    
-                        <li className="w-25 p-5 d-flex flex-column justify-content-between">
+                    return <div className=" w-25 p-5 border border-2 border-secondary m-1 p-1"  style={{backgroundColor:"whitesmoke"}}>    
+                        <li>
                             <b>COUNTRY NAME:{c.name.common}</b>
                             <img src={c.flags[0]} alt="" width="200px" />
-                            <b>CAPITAL:{c.capital}</b>
+                            <b>CAPITAL:{c.capital}</b><br />
                             <b><i>POPULATION:{c.population}</i></b>
                         </li>
                     </div>
